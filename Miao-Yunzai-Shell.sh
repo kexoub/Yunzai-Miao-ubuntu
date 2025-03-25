@@ -1466,9 +1466,6 @@ function nodejs()
     sleep 3s
     cd ~
     #安装依赖
-	
-	#安装依赖
-	cd /root/Miao-Yunzai
 	echo '即将开始安装依赖……'
 	sleep 1s
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
