@@ -308,12 +308,12 @@ function MzInstall()
 			sleep 1s
 		elif [ $num == 1 ];then
 			rm -rf miao-plugin
-			git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
+			git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
 			echo '已删除原插件并重新下载'
 			sleep 1s
 		fi
 	else
-		git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
+		git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
 		echo '喵喵插件安装完成'
 		sleep 1s
 	fi
