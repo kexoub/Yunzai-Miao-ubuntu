@@ -133,17 +133,6 @@ function MzInstall()
         echo '已安装git，不再重复安装'
         sleep 1.5s
     fi
-    		elif [ $num == 1 ];then
-			rm -rf miao-plugin
-			git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
-			echo '已删除原插件并重新下载'
-			sleep 1s
-		fi
-	else
-		git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
-		echo '喵喵插件安装完成'
-		sleep 1s
-	fi
 
 
 
@@ -279,6 +268,17 @@ function MzInstall()
 		if [ $num == 0 ];then
 			echo '已忽略，不再重新下载喵喵插件'
 			sleep 1s
+		elif [ $num == 1 ];then
+			rm -rf miao-plugin
+			git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
+			echo '已删除原插件并重新下载'
+			sleep 1s
+		fi
+	else
+		git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
+		echo '喵喵插件安装完成'
+		sleep 1s
+	fi
 
 	
 	#写入启动代码
@@ -308,6 +308,7 @@ function MzInstall()
 	clear
 	
     echo -e '\033[32m执行完成\033[0m'
+    echo -e '\033[32m请重新打开脚本输入11安装nodejs\033[0m'
     echo -e "重新打开本脚本请输入：\033[47;31mcn\033[0m"
     echo -e "启动机器人请输入\033[47;31mmz\033[0m"
     echo -e "机器人后台启动运行（即不显示代码启动）请输入：\033[47;31mmzstart\033[0m"
