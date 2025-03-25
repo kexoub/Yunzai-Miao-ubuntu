@@ -279,7 +279,7 @@ function MzInstall()
 		sleep 1s
 	fi
 
-	
+	cd Miao-Yunzai && pnpm i
 	#写入启动代码
 	echo echo 正在启动机器人 > /usr/bin/mz
 	sed -i -e '1a redis-server --daemonize yes --save 900 1 --save 300 10 && cd /root/Miao-Yunzai && node app' /usr/bin/mz
@@ -527,13 +527,13 @@ function guoba()
 		elif [ $num == 1 ];then
 			rm -rf Guoba-Plugin
 			git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./Guoba-Plugin/
-			cd /root/Miao-Yunzai && pnpm update
+			cd /root/Miao-Yunzai && pnpm update && pnpm i
 			echo '已删除原插件并重新下载'
 			sleep 1s
 		fi
 	else
 		git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./Guoba-Plugin/
-		cd /root/Miao-Yunzai && pnpm update
+		cd /root/Miao-Yunzai && pnpm update && pnpm i
 		echo '锅巴插件安装成功'
 		sleep 1s
 	fi
