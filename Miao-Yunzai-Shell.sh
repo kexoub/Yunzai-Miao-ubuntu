@@ -36,6 +36,8 @@ function Mz()
 
 10.友情链接
 
+11.一键安装nodejs18
+
 0.退出脚本
 
 *******************************************************
@@ -77,6 +79,9 @@ function MzNum()
 			;;
 		10)
 			OtherLink
+			;;
+                11)
+			nodejs
 			;;
 		999)
 			test
@@ -1503,6 +1508,18 @@ function OtherLink()
     read -s -n1 -p "按任意键或直接回车以返回 "
     Mz
 	MzNum
+}
+
+function nodejs()
+{
+    if ! type figlet >/dev/null 2>&1; then
+        apt-get update
+        apt-get install figlet -y
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        source ~/.bashrc
+        nvm install 18
+        nvm alias default 18
+    fi
 }
 
 function Question()
