@@ -293,12 +293,6 @@ function MzInstall()
     echo echo 正在停止机器人 > /usr/bin/mzstop
     sed -i -e '1a cd /root/Miao-Yunzai && pnpm stop' /usr/bin/mzstop
     chmod 777 /usr/bin/mzstop
-    echo echo 正在安装node > /usr/bin/mznvm
-    sed -i -e '1a cd /root && source ~/.bashrc &&nvm install 18 && nvm alias default 18' /usr/bin/mznvm
-    chmod 777 /usr/bin/mznvm
-    echo echo 正在安装nvm > /usr/bin/mznvmd
-    sed -i -e '1a cd /root && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash' /usr/bin/mznvmd
-    chmod 777 /usr/bin/mznvmd
 	#检查是否曾使用过历史脚本
 	if [ -e /usr/bin/cn ];then
 		rm -rf /usr/bin/cn
@@ -1470,6 +1464,12 @@ function nodejs()
     sleep 0.5s
     echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 3s
+    echo echo 正在安装node > /usr/bin/mznvm
+    sed -i -e '1a cd /root && source ~/.bashrc &&nvm install 18 && nvm alias default 18' /usr/bin/mznvm
+    chmod 777 /usr/bin/mznvm
+    echo echo 正在安装nvm > /usr/bin/mznvmd
+    sed -i -e '1a cd /root && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash' /usr/bin/mznvmd
+    chmod 777 /usr/bin/mznvmd
     #安装依赖
 	echo '即将开始安装依赖……'
 	sleep 1s
