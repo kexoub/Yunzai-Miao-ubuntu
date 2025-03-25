@@ -1512,14 +1512,26 @@ function OtherLink()
 
 function nodejs()
 {
-    if ! type figlet >/dev/null 2>&1; then
-        apt-get update
-        apt-get install figlet -y
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-        source ~/.bashrc
-        nvm install 18
-        nvm alias default 18
-    fi
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    sleep 0.5s
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    sleep 0.5s
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    sleep 3s
+    cd ~
+    #安装依赖
+    apt update
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    source ~/.bashrc
+    nvm install 18
+    nvm alias default 18
+    apt install npm -y
+    npm install -g pnpm
+    echo 'nodejs18安装完成'
+    echo -e 你当前的默认python版本是$(node --version)
+    sleep 1.5s
+	Mz
+	MzNum
 }
 
 function Question()
