@@ -280,13 +280,16 @@ function MzInstall()
 	fi
 
 	cd Miao-Yunzai && pnpm i
-	#写入启动代码
-	echo echo 正在启动机器人 > /usr/bin/mz
-	sed -i -e '1a redis-server --daemonize yes --save 900 1 --save 300 10 && cd /root/Miao-Yunzai && node app' /usr/bin/mz
-  chmod 777 /usr/bin/mz
- echo echo 正在后台启动机器人 > /usr/bin/mzstart
-	sed -i -e '1a cd /root/Miao-Yunzai && pnpm start' /usr/bin/mzstart
-	chmod 777 /usr/bin/mzstart
+    #写入启动代码
+    echo echo 正在启动机器人 > /usr/bin/mz
+    sed -i -e '1a redis-server --daemonize yes --save 900 1 --save 300 10 && cd /root/Miao-Yunzai && node app' /usr/bin/mz
+    chmod 777 /usr/bin/mz
+    echo echo 正在后台启动机器人 > /usr/bin/mzstart
+    sed -i -e '1a cd /root/Miao-Yunzai && pnpm start' /usr/bin/mzstart
+    chmod 777 /usr/bin/mzstart
+    echo echo 修改机器人登录账号信息 > /usr/bin/mzlogin
+    sed -i -e '1a cd /root/Miao-Yunzai && pnpm run login' /usr/bin/mzlogin
+    chmod 777 /usr/bin/mzlogin
     echo echo 查看机器人日志 > /usr/bin/mzlog
     sed -i -e '1a cd /root/Miao-Yunzai && pnpm run log' /usr/bin/mzlog 
     chmod 777 /usr/bin/mzlog
