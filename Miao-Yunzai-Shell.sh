@@ -14,6 +14,7 @@ function Mz()
 项目地址：https://gitee.com/yoimiya-kokomi/Miao-Yunzai
           https://github.com/yoimiya-kokomi/Miao-Yunzai
 	  本脚本适合在开启科学上网后安装
+         建议先按11安装基础再去安装喵崽
         
 *******************************************************    
               
