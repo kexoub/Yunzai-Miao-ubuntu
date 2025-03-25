@@ -1475,6 +1475,8 @@ function nodejs()
     nvm install 18
     
     nvm alias default 18
+
+    npm install -g pnpm
     
     echo 'nodejs18安装完成'
     
@@ -1486,6 +1488,7 @@ function nodejs()
     echo echo 正在安装nvm > /usr/bin/mznvmd
     sed -i -e '1a cd /root && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash' /usr/bin/mznvmd
     chmod 777 /usr/bin/mznvmd
+    
     sleep 15.5s
 	Mz
 	MzNum
