@@ -1530,7 +1530,7 @@ function nodejs()
     npm install -g pnpm
     echo 'nodejs18安装完成'
     echo -e 你当前的默认python版本是$(node --version)
-    sleep 1.5s
+    sleep 2.7s
 	Mz
 	MzNum
 }
