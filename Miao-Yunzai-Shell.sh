@@ -133,6 +133,19 @@ function MzInstall()
         echo '已安装git，不再重复安装'
         sleep 1.5s
     fi
+    		elif [ $num == 1 ];then
+			rm -rf miao-plugin
+			git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
+			echo '已删除原插件并重新下载'
+			sleep 1s
+		fi
+	else
+		git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
+		echo '喵喵插件安装完成'
+		sleep 1s
+	fi
+
+
 
 #安装redis
     if ! type redis-server >/dev/null 2>&1; then
