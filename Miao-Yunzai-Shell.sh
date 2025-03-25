@@ -1481,7 +1481,7 @@ function nodejs()
     echo -e 你当前的默认nodejs版本是$(node --version)
     echo '请重启ubuntu再执行一次11号安装'
     echo echo 正在安装node > /usr/bin/mznvm
-    sed -i -e '1a cd /root && source ~/.bashrc && nvm install 18 && nvm alias default 18' /usr/bin/mznvm
+    sed -i -e '1a cd /root && nvm install 18 && nvm alias default 18' /usr/bin/mznvm
     chmod 777 /usr/bin/mznvm
     echo echo 正在安装nvm > /usr/bin/mznvmd
     sed -i -e '1a cd /root && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash' /usr/bin/mznvmd
