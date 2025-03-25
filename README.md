@@ -11,6 +11,12 @@
 目前支持的版本：
 V3（应该不会还有人想用V2吧）
 
+### 开始  
+在您的linux控制台中输入如下代码并回车运行
+```
+bash <(curl -sSL https://linuxmirrors.cn/main.sh)
+```
+
 ### 原脚本仓库
 [原仓库](https://gitee.com/fw-cn/Yunzai)
 
