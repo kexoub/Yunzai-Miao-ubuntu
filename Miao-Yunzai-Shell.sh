@@ -1476,7 +1476,7 @@ function nodejs()
     npm install -g pnpm
     echo 'nodejs18安装完成'
     echo -e 你当前的默认nodejs版本是$(node --version)
-    echo '请重启ubuntu'
+    echo '请重启ubuntu再执行一次11号安装'
     sleep 15.5s
 	Mz
 	MzNum
