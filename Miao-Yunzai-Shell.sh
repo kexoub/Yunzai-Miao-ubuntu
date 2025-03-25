@@ -1469,12 +1469,17 @@ function nodejs()
 	echo '即将开始安装依赖……'
 	sleep 1s
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    source ~/.bashrc
+    
     nvm install 18
+    
     nvm alias default 18
+    
     nvm use 18
+    
     npm install -g pnpm
+    
     echo 'nodejs18安装完成'
+    
     echo -e 你当前的默认nodejs版本是$(node --version)
     echo '请重启ubuntu再执行一次11号安装'
     sleep 15.5s
