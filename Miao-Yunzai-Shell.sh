@@ -1472,7 +1472,7 @@ function nodejs()
     source ~/.bashrc
     nvm install 18
     nvm alias default 18
-    apt install npm -y
+    nvm use 18
     npm install -g pnpm
     echo 'nodejs18安装完成'
     echo -e 你当前的默认nodejs版本是$(node --version)
