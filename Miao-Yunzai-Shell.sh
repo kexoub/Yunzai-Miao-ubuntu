@@ -1472,9 +1472,9 @@ function nodejs()
 
     apt install update && 
     
-  sudo nvm install 18
+    nvm install 18
     
-   sudo nvm alias default 18
+    nvm alias default 18
     
     echo 'nodejs18安装完成'
     
