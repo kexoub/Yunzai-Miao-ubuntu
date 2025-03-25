@@ -32,7 +32,7 @@ curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/main/u.sh | bash
 ![输入图片说明](readme%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8.png)
 依次输入如下代码并回车
 ```
-apt update && apt install curl -y
+apt update && apt install curl wget unzip -y
 ```
 ### **运行一键安装脚本** 
 ```
