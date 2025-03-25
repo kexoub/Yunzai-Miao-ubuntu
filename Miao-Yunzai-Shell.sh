@@ -1238,9 +1238,9 @@ function QQ-repaire()
 	clear
 	echo '本方法仅仅适用于部分版本过低和禁止登录问题，如多次后无法解决，请停止修复防止账号异常'
 	read -p '请输入你的机器人QQ号并回车：' QQnumber
-    sed -i '/platform/d' /Miao-Yunzai/config/config/qq.yaml
-    echo platform: 6 >> /Miao-Yunzai/config/config/qq.yaml
-    cd Miao-Yunzai/data/icqq/$QQnumber
+    sed -i '/platform/d' /root/Miao-Yunzai/config/config/qq.yaml
+    echo platform: 6 >> /root/Miao-Yunzai/config/config/qq.yaml
+    cd root/Miao-Yunzai/data/icqq/$QQnumber
     curl -o device.json https://gitee.com/fw-cn/Yunzai/raw/master/QQrepaire
 	echo '已尝试进行修复'
 	read -p '是否立刻启动机器人，输入1启动，输入0不启动：' num
