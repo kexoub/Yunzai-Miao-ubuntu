@@ -1471,11 +1471,6 @@ function nodejs()
 	cd /root/Miao-Yunzai
 	echo '即将开始安装依赖……'
 	sleep 1s
-        apt install -y npm
-	npm install pnpm -g
-	pnpm install -P
-	echo '依赖安装结束，如有缺漏请自行安装'
-	sleep 1.5s
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     source ~/.bashrc
     nvm install 18
@@ -1483,7 +1478,7 @@ function nodejs()
     apt install npm -y
     npm install -g pnpm
     echo 'nodejs18安装完成'
-    echo -e 你当前的默认python版本是$(node --version)
+    echo -e 你当前的默认nodejs版本是$(node --version)
     sleep 2.7s
 	Mz
 	MzNum
