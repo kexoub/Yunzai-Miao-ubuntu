@@ -140,7 +140,6 @@ function MzInstall()
 	    sleep 0.5s
 	    #下载nodejs
         git clone --depth=1 https://gitee.com/fw-cn/yunzai-bot-nodejs.git ./node/
-        apt install npm -y 
         if [ $(uname -m) == "aarch64" ]; then
             cp /root/node/node-v17.9.0-linux-arm64.tar.gz /home/
             rm -rf /root/node
@@ -309,12 +308,12 @@ function MzInstall()
 			sleep 1s
 		elif [ $num == 1 ];then
 			rm -rf miao-plugin
-			git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
+			git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
 			echo '已删除原插件并重新下载'
 			sleep 1s
 		fi
 	else
-		git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
+		git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git
 		echo '喵喵插件安装完成'
 		sleep 1s
 	fi
