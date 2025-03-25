@@ -1464,8 +1464,9 @@ function nodejs()
     sleep 0.5s
     echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 3s
+
     echo echo 正在安装node > /usr/bin/mznvm
-    sed -i -e '1a cd /root && source ~/.bashrc &&nvm install 18 && nvm alias default 18' /usr/bin/mznvm
+    sed -i -e '1a cd /root && source ~/.bashrc && nvm install 18 && nvm alias default 18' /usr/bin/mznvm
     chmod 777 /usr/bin/mznvm
     echo echo 正在安装nvm > /usr/bin/mznvmd
     sed -i -e '1a cd /root && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash' /usr/bin/mznvmd
