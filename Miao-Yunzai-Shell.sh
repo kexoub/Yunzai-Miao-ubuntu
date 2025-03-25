@@ -296,11 +296,11 @@ function MzInstall()
 	if [ -e /usr/bin/cn ];then
 		rm -rf /usr/bin/cn
 		echo echo 正在启动长楠脚本 > /usr/bin/cn
-		sed -i -e '1a bash <(curl -sL https://gitee.com/fw-cn/Yunzai/raw/master/Miao-Yunzai-Shell.sh)' /usr/bin/cn
+		sed -i -e '1a bash <(curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/main/Miao-Yunzai-Shell.sh)' /usr/bin/cn
 		chmod 777 /usr/bin/cn
 	else
 		echo echo 正在启动长楠脚本 > /usr/bin/cn
-		sed -i -e '1a bash <(curl -sL https://gitee.com/fw-cn/Yunzai/raw/master/Miao-Yunzai-Shell.sh)' /usr/bin/cn
+		sed -i -e '1a bash <(curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/main/Miao-Yunzai-Shell.sh)' /usr/bin/cn
 		chmod 777 /usr/bin/cn
 	fi
 	clear
