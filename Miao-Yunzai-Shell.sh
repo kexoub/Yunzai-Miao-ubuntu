@@ -134,52 +134,6 @@ function MzInstall()
         sleep 1.5s
     fi
 
-	#安装nodejs
-	if ! type npm >/dev/null 2>&1; then
-        rm -rf /root/node
-		echo '未检测到nodejs，准备进行安装'
-        echo '正在准备安装nodejs中……'
-	    sleep 0.5s
-	    echo '正在准备安装nodejs中……'
-	    sleep 0.5s
-	    echo '正在准备安装nodejs中……'
-	    sleep 0.5s
-	    #下载nodejs
-        git clone --depth=1 https://gitee.com/fw-cn/yunzai-bot-nodejs.git ./node/
-        if [ $(uname -m) == "aarch64" ]; then
-            cp /root/node/node-v17.9.0-linux-arm64.tar.gz /home/
-            rm -rf /root/node
-            cd /home/
-            #解压
-            mkdir node17.9.0
-            tar -zxvf node-v17.9.0-linux-arm64.tar.gz -C node17.9.0 --strip-components 1
-            rm -rf node-v17.9.0-linux-arm64.tar.gz
-        elif [ $(uname -m) == "x86_64" ]; then
-            cp /root/node/node-v17.9.0-linux-x64.tar.gz /home/
-            rm -rf /root/node
-            cd /home/
-            #解压
-            mkdir node17.9.0
-            tar -zxvf node-v17.9.0-linux-x64.tar.gz -C node17.9.0 --strip-components 1
-            rm -rf node-v17.9.0-linux-x64.tar.gz
-        fi
-        #进行软链接
-        ln -sf /home/node17.9.0/bin/node /usr/local/bin
-        ln -sf /home/node17.9.0/bin/npm /usr/local/bin
-        ln -sf /home/node17.9.0/bin/npx /usr/local/bin
-        PATH=/usr/local/node17.9.0/bin:$PATH
-        if ! type npm >/dev/null 2>&1; then
-            echo 'nodejs安装失败，请重新运行脚本重试，或自行下载';
-            exit
-        else
-            echo 'nodejs安装成功'
-            sleep 1.5s
-        fi
-    else
-        echo '已安装nodejs，不再重复安装'
-        sleep 1.5s
-	fi
-
 #安装redis
     if ! type redis-server >/dev/null 2>&1; then
         echo '正在准备安装并启动redis'
@@ -312,29 +266,7 @@ function MzInstall()
 		if [ $num == 0 ];then
 			echo '已忽略，不再重新下载喵喵插件'
 			sleep 1s
-		elif [ $num == 1 ];then
-			rm -rf miao-plugin
-			git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
-			echo '已删除原插件并重新下载'
-			sleep 1s
-		fi
-	else
-		git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git
-		echo '喵喵插件安装完成'
-		sleep 1s
-	fi
 
-	
-	#安装依赖
-	cd /root/Miao-Yunzai
-	echo '即将开始安装依赖……'
-	sleep 1s
-        apt install -y npm
-	npm install pnpm -g
-	ln -sf /home/node17.9.0/bin/pnpm /usr/local/bin
-	pnpm install -P
-	echo '依赖安装结束，如有缺漏请自行安装'
-	sleep 1.5s
 	
 	#写入启动代码
 	echo echo 正在启动机器人 > /usr/bin/mz
