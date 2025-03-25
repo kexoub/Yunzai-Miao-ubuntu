@@ -1506,4 +1506,6 @@ if [ $(id -u) == 0 ];then
 else
     echo '当前运行环境不支持！'
     echo '手机用户请确保是否已安装并进入容器内，服务器用户请确保是否已切换root'
+    echo '如果没有安装ubuntu请输入指令'
+    echo 'curl -sL https://gitee.com/fw-cn/Yunzai/raw/master/u.sh | bash'
 fi
