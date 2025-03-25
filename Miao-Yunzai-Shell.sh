@@ -1469,14 +1469,12 @@ function nodejs()
 	sleep 1s
  
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+    npm install -g pnpm
     
     nvm install 18
     
     nvm alias default 18
-    
-    nvm use 18
-    
-    npm install -g pnpm
     
     echo 'nodejs18安装完成'
     
