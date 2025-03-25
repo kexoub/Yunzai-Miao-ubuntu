@@ -1464,7 +1464,7 @@ function nodejs()
     sleep 0.5s
     echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 3s
-    cd ~
+    cd
     #安装依赖
 	echo '即将开始安装依赖……'
 	sleep 1s
