@@ -134,8 +134,6 @@ function MzInstall()
         sleep 1.5s
     fi
 
-
-
 #安装redis
     if ! type redis-server >/dev/null 2>&1; then
         echo '正在准备安装并启动redis'
