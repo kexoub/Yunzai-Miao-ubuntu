@@ -323,6 +323,7 @@ function MzInstall()
 	cd /root/Miao-Yunzai
 	echo '即将开始安装依赖……'
 	sleep 1s
+        apt install -y npm
 	npm install pnpm -g
 	ln -sf /home/node17.9.0/bin/pnpm /usr/local/bin
 	pnpm install -P
