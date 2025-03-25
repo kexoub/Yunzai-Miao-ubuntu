@@ -13,6 +13,7 @@ function Mz()
                   Miao-Yunzai一键安装
 项目地址：https://gitee.com/yoimiya-kokomi/Miao-Yunzai
           https://github.com/yoimiya-kokomi/Miao-Yunzai
+	  本脚本适合在开启科学上网后安装
         
 *******************************************************    
               
@@ -1512,11 +1513,11 @@ function OtherLink()
 
 function nodejs()
 {
-    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 0.5s
-    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 0.5s
-    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要半个小时\033[0m甚至\033[31m更久\033[0m，请耐心等待'
+    echo -e '正在准备安装nvm~nodejs18，该步骤\033[31m可能需要10分钟\033[0m甚至\033[31m更久\033[0m，请耐心等待'
     sleep 3s
     cd ~
     #安装依赖
