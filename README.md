@@ -24,7 +24,7 @@ V3（应该不会还有人想用V2吧）
 ### 开始运行  
 在termux中输入如下代码并回车运行
 ```
-curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/master/u.sh | bash
+curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/main/u.sh | bash
 ```
 出现字样提示ubuntu安装完成
 ![输入图片说明](readme%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/ubuntu%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90.png)
@@ -36,7 +36,7 @@ apt update && apt install curl -y
 ```
 ### **运行一键安装脚本** 
 ```
-bash <(curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/master/Miao-Yunzai-Shell.sh)
+bash <(curl -sL https://github.com/kexoub/Yunzai-Miao-ubuntu/raw/main/Miao-Yunzai-Shell.sh)
 ```
 最后输入如下内容并回车即可启动机器人
 ```
@@ -51,6 +51,6 @@ yz
 sudo -i
 ```
 ```
-bash <(curl -sL https://gitee.com/jizijhj/Yunzai/raw/master/Miao-Yunzai-Shell.sh)
+bash <(curl -sL https://gitee.com/jizijhj/Yunzai/raw/main/Miao-Yunzai-Shell.sh)
 ```
 (用服务器的人应该不用教太多吧)
